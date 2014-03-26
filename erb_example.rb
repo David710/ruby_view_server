@@ -7,7 +7,9 @@ arr_var = ["lundi","mardi", "mercredi", "jeudi","vendredi", "samedi", "dimanche"
 
 template = ERB.new "The value of x is: <%= x %>"
 template2 = ERB.new "voici mon texte: <%= text + text2 %>"
-template3 = ERB.new "voici mon tableau de jours de la semaine: <%= arr_var.each {|day| day}%>"
+template3 = ERB.new "voici mon tableau de jours de la semaine:" # <% arr_var.each do |day|
+                                                               # puts day
+                                                                #end %>" 
 
 puts template.result(binding)
 puts template2.result(binding)

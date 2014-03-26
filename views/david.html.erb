@@ -1,0 +1,28 @@
+<h1> Salut les mecs ceci est mon super site Internet</h1>
+<p>
+  The time is now:
+  <%= Time.now %>
+</p>
+
+
+<p>
+  My Name is: <% @name = "david"%>
+  <%= @name %>
+</p>
+<p>
+les sports que j'aime sont:
+</p>
+ <ul>
+      <% ['tennis', 'foot', 'Athle', 'tous les sports'].each do |sport| %>
+        <li>  <%= sport %></li>
+      <% end %>
+</ul>
+
+<div class="my_class"> c'est un fait que  <%= @name %> aime les sports suivants:
+
+<ul>
+      <% ['tennis', 'foot', 'Athle', 'tous les sports'].each do |sport| %>
+        <li><%= sport %></li>
+      <% end %>
+</ul>
+</div>
