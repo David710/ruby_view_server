@@ -1,10 +1,25 @@
 <html>
+ 
+  <%
+        def link_to(name, url)
+            return "<a href='#{url}'>#{name}</a>"
+         end
+  %>
+  
+  
   <body>
-    <h1>You're using a layout</h1>
+    <h1>Attention c'est du serieux</h1>
     <p>
-      <h3> I'm a header</h3>
-      <p>Put things in the header</p>
-      <a href='me.html'>Me</a>
+      <h3> c'est le site de la mort</h3>
+      <p>on voit ça partout</p>
+      <a href='me.html'>ça c'est moi !!!</a>
+      <p> </p>
+       <%= link_to('This is a link to google', 'http://google.com') %>
+       <p> </p>
+       <%= link_to('un lien vers eurosport', 'http://eurosport.com') %>
+       <p> </p>
+       <%= link_to('un petit lien vers facebook', 'http://facebook.com') %>
+       <p> </p>
 
     </p>
     <hr />
@@ -13,8 +28,8 @@
     </div>
     <hr />
     <div>
-      <h3> I'm a footer</h3>
-      <p>Put things in the footer</p>
+      <h3> Moi c'est le pied</h3>
+      <p>tu peux mettre ce que tu veux <%= @name %></p>
     </div>
   </body>
 </html>
