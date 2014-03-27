@@ -9,6 +9,40 @@
   My Name is: <% @name = "david"%>
   <%= @name %>
 </p>
+
+<p>
+  mais quelle heure est il enfin ?
+   il est <%= Time.now %>
+</p>
+
+<p>
+  Je m'appelle :
+ <%= @request.query.inspect %>
+</p>
+
+ <% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+        Hello there <%= @request.query['first_name'] %>
+      <% else %>
+        Enter thy name
+      <% end %>
+
+<form>
+<input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female
+</form> 
+
+
+
+<p>
+entre un truc 
+</p>
+
+<form method='post' action="<%= @request.path %>">
+            First name: <input type="text" name="first_name" placeholder='first name'/><br />
+            <input type="submit" value="Submit" />
+        </form>
+
+
 <p>
 les sports que j'aime sont test:
 </p>
@@ -17,6 +51,8 @@ les sports que j'aime sont test:
         <li>  <%= sport %></li>
       <% end %>
 </ul>
+ 
+ 
 
 <div class="my_class"> c'est un fait que  <%= @name %> aime les sports suivants:
 
@@ -25,4 +61,7 @@ les sports que j'aime sont test:
         <li><%= sport %></li>
       <% end %>
 </ul>
+
 </div>
+
+
